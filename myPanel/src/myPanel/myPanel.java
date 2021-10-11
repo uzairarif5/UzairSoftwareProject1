@@ -31,7 +31,6 @@ public class myPanel {
 	    	for (int i = 0; i < 6;i++) {
 	    		Shape s = ShapeFactory.getShape(Shape.shapes[(int) Math.floor(Math.random() * 3)]);
 	    		myPanel.shapes.add(s);
-	    		System.out.println(s.name + "\t" + s.calArea());
 	    	}
 		    f.revalidate();
 		    f.repaint();
@@ -40,10 +39,6 @@ public class myPanel {
 	    b2.addActionListener(new ActionListener(){public void actionPerformed(ActionEvent e){
 	    	if(!myPanel.shapes.isEmpty()) {
 	    		SortingTechnique.sort(myPanel.shapes);
-		    	System.out.println();
-		    	for (int i = 0; i < 6;i++) {
-		    		System.out.println(myPanel.shapes.get(i).name + "\t" + myPanel.shapes.get(i).calArea());
-		    	}
 			    f.revalidate();
 			    f.repaint();
 	    	}
